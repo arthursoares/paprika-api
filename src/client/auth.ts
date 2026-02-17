@@ -42,7 +42,7 @@ export class JwtAuth implements AuthStrategy {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
-        'User-Agent': 'Paprika Recipe Manager 3/3.8.4',
+        'User-Agent': 'Paprika Recipe Manager 3/3.8.4 (com.hindsightlabs.paprika.mac.v3; build:41; macOS 15.5.0) Alamofire/5.2.2',
       },
       body: postData,
     });

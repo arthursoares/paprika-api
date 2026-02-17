@@ -36,7 +36,7 @@ export class PaprikaHttpClient {
 
     const headers: Record<string, string> = {
       ...authHeaders,
-      'User-Agent': 'Paprika Recipe Manager 3/3.8.4',
+      'User-Agent': 'Paprika Recipe Manager 3/3.8.4 (com.hindsightlabs.paprika.mac.v3; build:41; macOS 15.5.0) Alamofire/5.2.2',
       Accept: '*/*',
     };
 
@@ -82,19 +82,9 @@ export class PaprikaHttpClient {
   }
 
   private async parseResponse(response: Response): Promise<unknown> {
-    const contentEncoding = response.headers.get('content-encoding');
-    let buffer = Buffer.from(await response.arrayBuffer());
-
-    // Decompress if needed
-    if (contentEncoding === 'gzip') {
-      buffer = gunzipSync(buffer);
-    } else if (contentEncoding === 'br') {
-      buffer = brotliDecompressSync(buffer);
-    } else if (contentEncoding === 'deflate') {
-      buffer = inflateSync(buffer);
-    }
-
-    const text = buffer.toString('utf-8');
+    // Node's fetch automatically decompresses gzip/brotli/deflate,
+    // so we just need to parse the JSON directly
+    const text = await response.text();
     return JSON.parse(text);
   }
 }
