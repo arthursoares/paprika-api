@@ -2,11 +2,26 @@
   "name": "paprika-api",
   "version": "2.0.0",
   "description": "Unofficial Node.js client for Paprika Recipe Manager",
+  "author": "Arthur Soares",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthursoares/paprika-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arthursoares/paprika-api/issues"
+  },
+  "homepage": "https://github.com/arthursoares/paprika-api#readme",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
     "paprika": "dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
   "scripts": {
     "build": "tsup",

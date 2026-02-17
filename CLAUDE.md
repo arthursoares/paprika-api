@@ -40,12 +40,9 @@ src/
 
 ## Architecture
 
-### Dual API System
+### API Protocol
 
-| API | Auth | Implementation |
-|-----|------|----------------|
-| **v1** `/api/v1/sync/` | HTTP Basic Auth | `BasicAuth` class |
-| **v2** `/api/v2/sync/` | JWT Bearer Token | `JwtAuth` class |
+All endpoints use the v2 API (`/api/v2/sync/`) with JWT Bearer token authentication via `JwtAuth` class.
 
 ### Critical Protocol Details
 
