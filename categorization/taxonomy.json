@@ -1,0 +1,246 @@
+{
+  "cuisine": {
+    "parent_uid": "728250DD-C909-4FCD-B87E-C7539565DE64-1329-00000636D8D0DD2F",
+    "emoji": "🌍",
+    "categories": [
+      {
+        "name": "Thai",
+        "uid": "22E720C2-A9AE-4354-8A08-6AFD6D79A185",
+        "nested": false
+      },
+      {
+        "name": "French",
+        "uid": "23665A5F-B5D7-4020-8DCA-B9CA60349C2C",
+        "nested": false
+      },
+      {
+        "name": "Turkish",
+        "uid": "C3A8C6A2-AD80-4AA1-885C-A0FEBF943464",
+        "nested": false
+      },
+      {
+        "name": "Iranian",
+        "uid": "69E31181-AE82-4DBE-859A-4EF6CAC304C4",
+        "nested": false
+      },
+      {
+        "name": "Korean",
+        "uid": "FA35F42F-C869-4EB0-A91A-DB2F01B103D2",
+        "nested": false
+      },
+      {
+        "name": "Middle Eastern",
+        "uid": "58AC5AB6-3535-4A61-8D07-845D92703C71-51426-0000FC1B0867EBE0",
+        "nested": false
+      },
+      {
+        "name": "Portuguese",
+        "uid": "A970A099-C861-4A07-BBB7-D226AB74B0A1-50672-0000F8AF42233729",
+        "nested": false
+      },
+      {
+        "name": "Chinese",
+        "uid": "20F7BD70-C4CB-4E48-A956-8DA933AA0F8D-13268-0000DFD3C4656D5B",
+        "nested": false
+      },
+      {
+        "name": "Indian",
+        "uid": "CDC88B3A-412E-4B3F-9A38-ADD28724F7FA-2161-0000102D307626F0",
+        "nested": false
+      },
+      {
+        "name": "Italian",
+        "uid": "C1385F5D-7AEE-4924-8A37-000380EA127E-2161-00000FEEE2D7B008",
+        "nested": false
+      },
+      {
+        "name": "Japanese",
+        "uid": "59776036-2465-4802-B3B2-B79D0827C9C9-4692-00003BD9E39B2E83",
+        "nested": false
+      },
+      {
+        "name": "Brazilian",
+        "uid": "ADDDED90-024B-446A-9E88-A034BD799787-1329-0000067FD4C68435",
+        "nested": false
+      },
+      {
+        "name": "Mexican",
+        "uid": "E4F021D0-0257-4158-BA6F-2230ABE5132F-19478-0000F2115DF05DB1",
+        "nested": false
+      }
+    ]
+  },
+  "dish_type": {
+    "parent_uid": "51542FCF-08D0-4492-9173-9F0C4A6F2B99-69366-000164CA3A77323C",
+    "emoji": "🍲",
+    "categories": [
+      {
+        "name": "🧱 Components",
+        "uid": "FBCE74FF-1115-4C93-BEAD-AF55C7F23C3B",
+        "nested": false
+      },
+      {
+        "name": "Dressings, Dips, and Spreads",
+        "uid": "99B7CA88-0D59-4344-8DDB-442C883CCA0D-332-0000014537F96019",
+        "nested": true
+      },
+      {
+        "name": "Smoothies & Juices",
+        "uid": "544EEC3D-41A0-4C73-A31D-8E7ECABF7ADF-12469-0000CCB305C42B93",
+        "nested": true
+      },
+      {
+        "name": "Sauces",
+        "uid": "29561437-0225-43A6-B047-0CB40D40DC76",
+        "nested": true
+      },
+      {
+        "name": "Spice Blends",
+        "uid": "B8B1026D-11A7-42AD-A7F9-20A5F07137DC",
+        "nested": true
+      },
+      {
+        "name": "Stocks & Broths",
+        "uid": "FBD20B37-E106-451C-9B2F-4D356134292F",
+        "nested": true
+      },
+      {
+        "name": "Baking",
+        "uid": "8A04DD8D-1E35-440F-AEFD-D68F3FA5A24D",
+        "nested": false
+      },
+      {
+        "name": "Cookies",
+        "uid": "F859FECA-1CB5-4918-BDDC-607205BBE8F9",
+        "nested": true
+      },
+      {
+        "name": "Cake",
+        "uid": "8E45C1DF-E3CF-41FA-B18D-5034E44EE54C",
+        "nested": true
+      },
+      {
+        "name": "Bread",
+        "uid": "E25709C2-442E-4FC3-A68F-AABFC39BCDEE",
+        "nested": true
+      },
+      {
+        "name": "Pies & Tarts",
+        "uid": "8E8CEC3E-EC74-4A4E-8264-97E2FB49BBC7",
+        "nested": true
+      },
+      {
+        "name": "Pastries",
+        "uid": "5254CFF0-6AF9-41A4-B4B5-97E8EEB58B8A",
+        "nested": true
+      },
+      {
+        "name": "Eintopf",
+        "uid": "F1FA6475-FBA8-4609-8B58-BA9B0CCC4D60-402-0000039A834A6B31",
+        "nested": false
+      },
+      {
+        "name": "Christmas",
+        "uid": "D70EA9DE-F8DB-4C21-97D2-AA2F56DE5631",
+        "nested": false
+      },
+      {
+        "name": "Side dish",
+        "uid": "38DB12C4-BF24-48C8-B7B7-D10E3D2066E6",
+        "nested": false
+      },
+      {
+        "name": "Rice",
+        "uid": "6BA3AF1F-78A0-40EB-9B24-C480856A04B5",
+        "nested": true
+      },
+      {
+        "name": "Snacks",
+        "uid": "3D3D03B1-0712-4D19-BFE7-B6C293E59137",
+        "nested": false
+      },
+      {
+        "name": "Curry",
+        "uid": "B79B6D36-197E-44B7-BF3B-7A4C42237C34-4704-000003BC8474A5CB",
+        "nested": false
+      },
+      {
+        "name": "Noodles or Pasta",
+        "uid": "8C0B037D-3FC0-4F53-9CF8-A3C3A795EFB2-69366-000164CB844F2C6A",
+        "nested": false
+      },
+      {
+        "name": "Soups",
+        "uid": "D0C57081-1C12-415D-8D72-BEFE0A554B1C-51426-0000F9E5342C8C87",
+        "nested": false
+      },
+      {
+        "name": "Salads",
+        "uid": "99F2DF69-3276-4466-8D92-C65ED5CD935E-1329-0000069C9B885204",
+        "nested": false
+      }
+    ]
+  },
+  "meal_type": {
+    "parent_uid": "ADFA6870-EE12-45DF-B79E-59D0AB0B6742-51426-0000F9C36CB43299",
+    "emoji": "🍽️",
+    "categories": [
+      {
+        "name": "Desserts",
+        "uid": "E2C982F4-0924-41D8-99CD-041BDAB3EB79",
+        "nested": false
+      },
+      {
+        "name": "Mains",
+        "uid": "11B8DDDA-B7BE-46A3-93EB-A0041264BAA4",
+        "nested": false
+      },
+      {
+        "name": "Breakfast",
+        "uid": "6FA9CB72-9A5E-4EEA-9FE3-B7559EAA86DF-1329-00000684375D48EF",
+        "nested": false
+      }
+    ]
+  },
+  "protein": {
+    "parent_uid": "6C05F282-32B4-4FFE-9961-F157D23BD02D-332-000000238BA0F14F",
+    "emoji": "🥩",
+    "categories": [
+      {
+        "name": "Vegetarian",
+        "uid": "25E8273D-06F9-4BB4-A790-90946EEC1351-19478-0000F1CD411E324F",
+        "nested": false
+      },
+      {
+        "name": "Beef",
+        "uid": "E800F365-1744-45CF-A0E3-387622AAABB8-1329-00000642BE108D5F",
+        "nested": false
+      },
+      {
+        "name": "Seafood",
+        "uid": "D26E2AAF-4A54-4F3D-A53A-86C5613DC68D",
+        "nested": false
+      },
+      {
+        "name": "Lamb",
+        "uid": "D81CC715-A6C4-423D-94D0-CC700C20279A",
+        "nested": false
+      },
+      {
+        "name": "Fish",
+        "uid": "391A3111-52D8-4C1E-930F-B6B1D2E0644D-1329-0000064225ED0D87",
+        "nested": false
+      },
+      {
+        "name": "Pork",
+        "uid": "51E18B36-8C48-45AD-96AC-A3416917E5CB-1329-000006415325A841",
+        "nested": false
+      },
+      {
+        "name": "Chicken",
+        "uid": "AAA39C5E-4756-4398-9B36-62FD185BE1E1-1329-000006401CCD3622",
+        "nested": false
+      }
+    ]
+  }
+}
