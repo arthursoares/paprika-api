@@ -51,7 +51,7 @@ export class JwtAuth implements AuthStrategy {
       throw new AuthError(`Login failed: ${response.status}`);
     }
 
-    const data = await response.json();
+    const data = await response.json() as { result?: { token?: string } };
     if (!data.result?.token) {
       throw new AuthError('No token in login response');
     }
