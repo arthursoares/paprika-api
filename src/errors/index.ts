@@ -2,7 +2,9 @@ export class PaprikaError extends Error {
   constructor(message: string, public override cause?: Error) {
     super(message);
     this.name = 'PaprikaError';
-    Error.captureStackTrace?.(this, this.constructor);
+    if ('captureStackTrace' in Error) {
+      (Error as { captureStackTrace: (err: Error, constructor: Function) => void }).captureStackTrace(this, this.constructor);
+    }
   }
 }
 
