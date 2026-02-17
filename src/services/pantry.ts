@@ -10,7 +10,7 @@ export class PantryService {
     const response = await this.client.request<{ result: unknown[] }>({
       method: 'GET',
       endpoint: '/pantry/',
-      apiVersion: 'v1',
+      apiVersion: 'v2',
     });
 
     return z.array(PantryItemSchema).parse(response.result);

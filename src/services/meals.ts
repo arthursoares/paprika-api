@@ -10,7 +10,7 @@ export class MealService {
     const response = await this.client.request<{ result: unknown[] }>({
       method: 'GET',
       endpoint: '/meals/',
-      apiVersion: 'v1',
+      apiVersion: 'v2',
     });
 
     return z.array(MealSchema).parse(response.result);

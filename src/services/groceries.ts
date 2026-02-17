@@ -9,7 +9,7 @@ export class GroceryService {
     const response = await this.client.request<{ result: unknown[] }>({
       method: 'GET',
       endpoint: '/groceries/',
-      apiVersion: 'v1',
+      apiVersion: 'v2',
     });
 
     return z.array(GroceryItemSchema).parse(response.result);
@@ -18,9 +18,9 @@ export class GroceryService {
   async delete(uid: string): Promise<void> {
     await this.client.request({
       method: 'POST',
-      endpoint: `/grocery/${uid}/`,
-      apiVersion: 'v1',
-      data: { uid, deleted: true },
+      endpoint: '/groceries/',
+      apiVersion: 'v2',
+      data: [{ uid, deleted: true }],
     });
   }
 

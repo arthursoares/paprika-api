@@ -12,7 +12,7 @@ export class RecipeService {
     const response = await this.client.request<{ result: unknown[] }>({
       method: 'GET',
       endpoint: '/recipes/',
-      apiVersion: 'v1',
+      apiVersion: 'v2',
     });
 
     return z.array(RecipeListItemSchema).parse(response.result);
@@ -22,7 +22,7 @@ export class RecipeService {
     const response = await this.client.request<{ result: unknown }>({
       method: 'GET',
       endpoint: `/recipe/${uid}/`,
-      apiVersion: 'v1',
+      apiVersion: 'v2',
     });
 
     if (!response.result) {
@@ -62,12 +62,13 @@ export class RecipeService {
       on_favorites: recipe.on_favorites ?? false,
       created: recipe.created ?? now,
       hash: this.computeHash(recipe),
+      deleted: false,
     };
 
     await this.client.request({
       method: 'POST',
       endpoint: `/recipe/${uid}/`,
-      apiVersion: 'v1',
+      apiVersion: 'v2',
       data: fullRecipe,
     });
 

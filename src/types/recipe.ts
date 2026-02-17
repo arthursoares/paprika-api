@@ -26,6 +26,9 @@ export const RecipeSchema = z.object({
   on_favorites: z.boolean(),
   created: z.string(),
   hash: z.string(),
+  // Added missing fields:
+  deleted: z.boolean().optional().default(false),
+  scale: z.string().nullable().optional(),  // Recipe scaling e.g. "2/1"
 });
 
 export type Recipe = z.infer<typeof RecipeSchema>;

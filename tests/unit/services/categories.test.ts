@@ -7,7 +7,7 @@ describe('CategoryService', () => {
   describe('list', () => {
     it('returns categories', async () => {
       const client = createMockClient({
-        'GET v1 /categories/': {
+        'GET v2 /categories/': {
           result: [
             { uid: 'CAT1', name: 'Desserts', parent_uid: null, order_flag: 0 },
           ],
@@ -23,7 +23,7 @@ describe('CategoryService', () => {
 
     it('returns empty array when no categories', async () => {
       const client = createMockClient({
-        'GET v1 /categories/': { result: [] },
+        'GET v2 /categories/': { result: [] },
       });
       const service = new CategoryService(client);
 

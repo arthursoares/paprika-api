@@ -7,7 +7,7 @@ describe('RecipeService', () => {
   describe('list', () => {
     it('returns recipe list items', async () => {
       const client = createMockClient({
-        'GET v1 /recipes/': {
+        'GET v2 /recipes/': {
           result: [
             { uid: 'ABC123', hash: 'hash1' },
             { uid: 'DEF456', hash: 'hash2' },
@@ -26,7 +26,7 @@ describe('RecipeService', () => {
   describe('get', () => {
     it('returns full recipe', async () => {
       const client = createMockClient({
-        'GET v1 /recipe/ABC123/': {
+        'GET v2 /recipe/ABC123/': {
           result: {
             uid: 'ABC123',
             name: 'Test Recipe',
@@ -65,7 +65,7 @@ describe('RecipeService', () => {
 
     it('throws NotFoundError when recipe missing', async () => {
       const client = createMockClient({
-        'GET v1 /recipe/MISSING/': { result: null },
+        'GET v2 /recipe/MISSING/': { result: null },
       });
       const service = new RecipeService(client);
 

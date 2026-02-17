@@ -11,7 +11,7 @@ export class CategoryService {
     const response = await this.client.request<{ result: unknown[] }>({
       method: 'GET',
       endpoint: '/categories/',
-      apiVersion: 'v1',
+      apiVersion: 'v2',
     });
 
     return z.array(CategorySchema).parse(response.result);
