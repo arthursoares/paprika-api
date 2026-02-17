@@ -8,6 +8,13 @@ import {
   PantryService,
   GroceryService,
   PhotoService,
+  GroceryListService,
+  GroceryAisleService,
+  MealTypeService,
+  MenuService,
+  MenuItemService,
+  BookmarkService,
+  StatusService,
 } from './services';
 
 export class PaprikaClient {
@@ -17,6 +24,13 @@ export class PaprikaClient {
   readonly pantry: PantryService;
   readonly groceries: GroceryService;
   readonly photos: PhotoService;
+  readonly groceryLists: GroceryListService;
+  readonly groceryAisles: GroceryAisleService;
+  readonly mealTypes: MealTypeService;
+  readonly menus: MenuService;
+  readonly menuItems: MenuItemService;
+  readonly bookmarks: BookmarkService;
+  readonly status: StatusService;
 
   constructor(config: PaprikaConfig) {
     const validated = PaprikaConfigSchema.parse(config);
@@ -31,6 +45,13 @@ export class PaprikaClient {
     this.pantry = new PantryService(httpClient);
     this.groceries = new GroceryService(httpClient);
     this.photos = new PhotoService(httpClient, this.recipes);
+    this.groceryLists = new GroceryListService(httpClient);
+    this.groceryAisles = new GroceryAisleService(httpClient);
+    this.mealTypes = new MealTypeService(httpClient);
+    this.menus = new MenuService(httpClient);
+    this.menuItems = new MenuItemService(httpClient);
+    this.bookmarks = new BookmarkService(httpClient);
+    this.status = new StatusService(httpClient);
   }
 }
 

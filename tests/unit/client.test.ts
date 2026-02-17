@@ -14,6 +14,14 @@ describe('PaprikaClient', () => {
     expect(client.pantry).toBeDefined();
     expect(client.groceries).toBeDefined();
     expect(client.photos).toBeDefined();
+    // New services:
+    expect(client.groceryLists).toBeDefined();
+    expect(client.groceryAisles).toBeDefined();
+    expect(client.mealTypes).toBeDefined();
+    expect(client.menus).toBeDefined();
+    expect(client.menuItems).toBeDefined();
+    expect(client.bookmarks).toBeDefined();
+    expect(client.status).toBeDefined();
   });
 
   it('validates config', () => {
