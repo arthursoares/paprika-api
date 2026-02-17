@@ -1,0 +1,44 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/v2/sync/recipe/66C67F21-F496-41D4-9ED5-50220CB5F4B8/",
+    "body": {
+      "total_time": "30 min",
+      "created": "2026-02-17 13:31:34",
+      "source": "",
+      "on_favorites": false,
+      "prep_time": "23",
+      "description": "Description!!",
+      "nutritional_info": "",
+      "source_url": "https://source.com",
+      "hash": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+      "cook_time": "231",
+      "difficulty": "Easy",
+      "name": "Adding a Recipe",
+      "is_pinned": true,
+      "in_trash": false,
+      "photo_large": "00000000-0000-0000-0000-000000000009.jpg",
+      "directions": "Directions\n\n",
+      "photo": "00000000-0000-0000-0000-000000000008.jpg",
+      "notes": "",
+      "deleted": false,
+      "photo_hash": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+      "servings": "5 People",
+      "rating": 3,
+      "scale": "2/1",
+      "categories": [
+        "00000000-0000-0000-0000-000000000001",
+        "00000000-0000-0000-0000-000000000007"
+      ],
+      "ingredients": "This is ingredient 1\n[Has a link](https://google.com)",
+      "uid": "00000000-0000-0000-0000-000000000002",
+      "image_url": null
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": true
+    }
+  }
+}

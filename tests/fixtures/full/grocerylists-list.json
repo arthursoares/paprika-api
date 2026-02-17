@@ -1,0 +1,28 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/v2/sync/grocerylists/",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": [
+        {
+          "uid": "00000000-0000-0000-0000-000000000010",
+          "name": "New Grocery List",
+          "order_flag": 1,
+          "is_default": false,
+          "reminders_list": "Paprika"
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "My Grocery List",
+          "order_flag": 0,
+          "is_default": true,
+          "reminders_list": "Paprika"
+        }
+      ]
+    }
+  }
+}

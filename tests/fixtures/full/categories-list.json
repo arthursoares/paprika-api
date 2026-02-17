@@ -1,0 +1,32 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/v2/sync/categories/",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": [
+        {
+          "uid": "00000000-0000-0000-0000-000000000007",
+          "order_flag": 0,
+          "name": "Children Category",
+          "parent_uid": "00000000-0000-0000-0000-000000000006"
+        },
+        {
+          "uid": "00000000-0000-0000-0000-000000000006",
+          "order_flag": 1,
+          "name": "New Category",
+          "parent_uid": null
+        },
+        {
+          "uid": "00000000-0000-0000-0000-000000000001",
+          "order_flag": 0,
+          "name": "Teste",
+          "parent_uid": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/v2/account/register/",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzEzMzE0ODgsImVtYWlsIjoiYXJ0aHVyc29hcmVzK3BhcHJpa2FAZ21haWwuY29tIn0.74d3raQM9mmIZeTHm_8i2A0wszbYDOo1Vk2Ilsnnnr4"
+      }
+    }
+  }
+}

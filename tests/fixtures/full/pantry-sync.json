@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/v2/sync/pantry/",
+    "body": [
+      {
+        "uid": "00000000-0000-0000-0000-000000000014",
+        "purchase_date": "2026-02-17 00:00:00",
+        "aisle": "Baking Goods",
+        "quantity": "2",
+        "aisle_uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+        "deleted": false,
+        "ingredient": "agave nectar",
+        "has_expiration": false,
+        "in_stock": true,
+        "expiration_date": "2026-02-16 00:00:00"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": true
+    }
+  }
+}

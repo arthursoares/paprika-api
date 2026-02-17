@@ -1,0 +1,22 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/v2/sync/grocerylists/",
+    "body": [
+      {
+        "order_flag": 1,
+        "reminders_list": "Paprika",
+        "name": "New Grocery List",
+        "deleted": false,
+        "is_default": false,
+        "uid": "00000000-0000-0000-0000-000000000010"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": true
+    }
+  }
+}

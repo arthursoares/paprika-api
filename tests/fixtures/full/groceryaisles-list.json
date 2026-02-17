@@ -1,0 +1,134 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/v2/sync/groceryaisles/",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": [
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Baby Products",
+          "order_flag": 0
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Pet Products",
+          "order_flag": 18
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Sauces and Condiments",
+          "order_flag": 20
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Pasta, Rice and Beans",
+          "order_flag": 17
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Miscellaneous",
+          "order_flag": 15
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Meat",
+          "order_flag": 14
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "International Cuisine",
+          "order_flag": 13
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Oils and Dressings",
+          "order_flag": 16
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Home and Garden",
+          "order_flag": 12
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Health and Beauty",
+          "order_flag": 11
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Deli",
+          "order_flag": 9
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Dairy",
+          "order_flag": 8
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Cleaning Supplies",
+          "order_flag": 7
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Frozen Foods",
+          "order_flag": 10
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Beer, Wine and Spirits",
+          "order_flag": 5
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Canned and Jar Goods",
+          "order_flag": 6
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Beverages",
+          "order_flag": 4
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Snacks",
+          "order_flag": 23
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Breads and Cereals",
+          "order_flag": 3
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Seafood",
+          "order_flag": 22
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Baking Goods",
+          "order_flag": 2
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Bakery",
+          "order_flag": 1
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Spices and Seasonings",
+          "order_flag": 21
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Produce",
+          "order_flag": 19
+        }
+      ]
+    }
+  }
+}

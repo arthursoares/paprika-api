@@ -1,0 +1,59 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/v2/sync/mealtypes/",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": [
+        {
+          "uid": "00000000-0000-0000-0000-000000000022",
+          "name": "New Meal Type",
+          "order_flag": 4,
+          "color": "#000000",
+          "export_all_day": false,
+          "export_time": 0,
+          "original_type": 0
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Lunch",
+          "order_flag": 1,
+          "color": "#377118",
+          "export_all_day": false,
+          "export_time": 43200,
+          "original_type": 1
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Snacks",
+          "order_flag": 3,
+          "color": "#711D75",
+          "export_all_day": true,
+          "export_time": 0,
+          "original_type": 3
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Dinner",
+          "order_flag": 2,
+          "color": "#2161C9",
+          "export_all_day": false,
+          "export_time": 64800,
+          "original_type": 2
+        },
+        {
+          "uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "name": "Breakfast",
+          "order_flag": 0,
+          "color": "#E36C0C",
+          "export_all_day": false,
+          "export_time": 28800,
+          "original_type": 0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/v2/sync/meals/",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": [
+        {
+          "uid": "00000000-0000-0000-0000-000000000024",
+          "recipe_uid": "00000000-0000-0000-0000-000000000017",
+          "date": "2026-02-17 00:00:00",
+          "type": 3,
+          "name": "Second Recipe",
+          "order_flag": 4,
+          "type_uid": "00000000-0000-0000-0000-000000000022",
+          "scale": null,
+          "is_ingredient": false
+        },
+        {
+          "uid": "00000000-0000-0000-0000-000000000020",
+          "recipe_uid": null,
+          "date": "2026-02-17 00:00:00",
+          "type": 3,
+          "name": "Note to Snack",
+          "order_flag": 3,
+          "type_uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "scale": null,
+          "is_ingredient": false
+        },
+        {
+          "uid": "00000000-0000-0000-0000-000000000019",
+          "recipe_uid": null,
+          "date": "2026-02-17 00:00:00",
+          "type": 2,
+          "name": "Note to Dinner",
+          "order_flag": 2,
+          "type_uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "scale": null,
+          "is_ingredient": false
+        },
+        {
+          "uid": "00000000-0000-0000-0000-000000000018",
+          "recipe_uid": "00000000-0000-0000-0000-000000000017",
+          "date": "2026-02-20 00:00:00",
+          "type": 2,
+          "name": "Second Recipe",
+          "order_flag": 0,
+          "type_uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "scale": null,
+          "is_ingredient": false
+        },
+        {
+          "uid": "00000000-0000-0000-0000-000000000016",
+          "recipe_uid": null,
+          "date": "2026-02-17 00:00:00",
+          "type": 1,
+          "name": "Note for a Meal at Lunch",
+          "order_flag": 1,
+          "type_uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "scale": null,
+          "is_ingredient": false
+        },
+        {
+          "uid": "00000000-0000-0000-0000-000000000015",
+          "recipe_uid": "00000000-0000-0000-0000-000000000002",
+          "date": "2026-02-17 00:00:00",
+          "type": 0,
+          "name": "Adding a Recipe",
+          "order_flag": 0,
+          "type_uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "scale": null,
+          "is_ingredient": false
+        },
+        {
+          "uid": "00000000-0000-0000-0000-000000000005",
+          "recipe_uid": "00000000-0000-0000-0000-000000000002",
+          "date": "2026-02-19 00:00:00",
+          "type": 0,
+          "name": "Adding a Recipe",
+          "order_flag": 0,
+          "type_uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "scale": null,
+          "is_ingredient": false
+        }
+      ]
+    }
+  }
+}

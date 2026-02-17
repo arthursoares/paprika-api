@@ -1,0 +1,22 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/v2/sync/menus/",
+    "body": [
+      {
+        "days": 2,
+        "order_flag": 0,
+        "deleted": false,
+        "name": "New Menu",
+        "notes": "Description now with two days\n",
+        "uid": "00000000-0000-0000-0000-000000000021"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": true
+    }
+  }
+}

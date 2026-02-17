@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/v2/sync/categories/",
+    "body": [
+      {
+        "uid": "00000000-0000-0000-0000-000000000007",
+        "deleted": false,
+        "order_flag": 0,
+        "name": "Children Category",
+        "parent_uid": "00000000-0000-0000-0000-000000000006"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": true
+    }
+  }
+}

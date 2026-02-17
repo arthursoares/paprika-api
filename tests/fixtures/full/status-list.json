@@ -1,0 +1,28 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/v2/sync/status/",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": {
+        "categories": 3,
+        "recipes": 8,
+        "photos": 1,
+        "groceries": 5,
+        "grocerylists": 2,
+        "groceryaisles": 24,
+        "groceryingredients": 0,
+        "meals": 8,
+        "mealtypes": 7,
+        "bookmarks": 0,
+        "pantry": 4,
+        "pantrylocations": 0,
+        "menus": 2,
+        "menuitems": 1
+      }
+    }
+  }
+}

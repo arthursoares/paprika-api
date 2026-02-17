@@ -1,0 +1,74 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/v2/sync/groceries/",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": [
+        {
+          "uid": "00000000-0000-0000-0000-000000000012",
+          "recipe_uid": null,
+          "name": "fage total",
+          "order_flag": 1,
+          "purchased": false,
+          "aisle": "Dairy",
+          "ingredient": "fage total",
+          "recipe": null,
+          "instruction": "",
+          "quantity": "",
+          "separate": false,
+          "aisle_uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "list_uid": "00000000-0000-0000-0000-000000000010"
+        },
+        {
+          "uid": "00000000-0000-0000-0000-000000000011",
+          "recipe_uid": null,
+          "name": "Fabric Softener",
+          "order_flag": 0,
+          "purchased": true,
+          "aisle": "Home and Garden",
+          "ingredient": "Fabric Softener",
+          "recipe": null,
+          "instruction": "",
+          "quantity": "",
+          "separate": false,
+          "aisle_uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "list_uid": "00000000-0000-0000-0000-000000000010"
+        },
+        {
+          "uid": "00000000-0000-0000-0000-000000000004",
+          "recipe_uid": null,
+          "name": "This is ingredient 1",
+          "order_flag": 1,
+          "purchased": false,
+          "aisle": "Miscellaneous",
+          "ingredient": "This is ingredient 1",
+          "recipe": "Adding a Recipe",
+          "instruction": "",
+          "quantity": "",
+          "separate": false,
+          "aisle_uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "list_uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "uid": "00000000-0000-0000-0000-000000000003",
+          "recipe_uid": null,
+          "name": "Has a link",
+          "order_flag": 0,
+          "purchased": false,
+          "aisle": "Miscellaneous",
+          "ingredient": "Has a link",
+          "recipe": "Adding a Recipe",
+          "instruction": "",
+          "quantity": "a link",
+          "separate": false,
+          "aisle_uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "list_uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000"
+        }
+      ]
+    }
+  }
+}

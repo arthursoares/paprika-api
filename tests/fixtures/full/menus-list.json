@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/v2/sync/menus/",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": [
+        {
+          "uid": "00000000-0000-0000-0000-000000000021",
+          "name": "New Menu",
+          "notes": "Description now with two days\n",
+          "order_flag": 0,
+          "days": 2
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/v2/sync/menuitems/",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": [
+        {
+          "uid": "00000000-0000-0000-0000-000000000023",
+          "name": "Second Recipe",
+          "order_flag": 0,
+          "recipe_uid": "00000000-0000-0000-0000-000000000017",
+          "menu_uid": "00000000-0000-0000-0000-000000000021",
+          "type_uid": "00000000-0000-0000-0000-000000000022",
+          "day": 1,
+          "scale": null,
+          "is_ingredient": false
+        }
+      ]
+    }
+  }
+}

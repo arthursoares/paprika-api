@@ -1,0 +1,40 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/v2/sync/pantry/",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": [
+        {
+          "uid": "00000000-0000-0000-0000-000000000014",
+          "ingredient": "agave nectar",
+          "aisle": "Baking Goods",
+          "expiration_date": "2026-02-16 00:00:00",
+          "has_expiration": false,
+          "in_stock": true,
+          "purchase_date": "2026-02-17 00:00:00",
+          "quantity": "2",
+          "aisle_uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "location_uid": null,
+          "notes": null
+        },
+        {
+          "uid": "00000000-0000-0000-0000-000000000013",
+          "ingredient": "Fabric Softener",
+          "aisle": "Home and Garden",
+          "expiration_date": null,
+          "has_expiration": false,
+          "in_stock": true,
+          "purchase_date": "2026-02-17 00:00:00",
+          "quantity": "",
+          "aisle_uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+          "location_uid": null,
+          "notes": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/v2/sync/meals/",
+    "body": [
+      {
+        "order_flag": 4,
+        "recipe_uid": "00000000-0000-0000-0000-000000000017",
+        "deleted": false,
+        "uid": "00000000-0000-0000-0000-000000000024",
+        "type_uid": "00000000-0000-0000-0000-000000000022",
+        "type": 3,
+        "date": "2026-02-17 00:00:00",
+        "name": "Second Recipe"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": true
+    }
+  }
+}

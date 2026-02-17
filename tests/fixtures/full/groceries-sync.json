@@ -1,0 +1,29 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/v2/sync/groceries/",
+    "body": [
+      {
+        "aisle_uid": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+        "uid": "00000000-0000-0000-0000-000000000011",
+        "list_uid": "00000000-0000-0000-0000-000000000010",
+        "order_flag": 0,
+        "deleted": false,
+        "instruction": "",
+        "separate": false,
+        "purchased": true,
+        "ingredient": "Fabric Softener",
+        "name": "Fabric Softener",
+        "quantity": "",
+        "recipe": null,
+        "aisle": "Home and Garden"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": true
+    }
+  }
+}

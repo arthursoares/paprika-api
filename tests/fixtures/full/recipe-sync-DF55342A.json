@@ -1,0 +1,41 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/v2/sync/recipe/DF55342A-30E2-4FB9-8135-B1551D306510/",
+    "body": {
+      "cook_time": "",
+      "hash": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+      "photo_large": null,
+      "on_favorites": false,
+      "scale": null,
+      "servings": "",
+      "nutritional_info": "",
+      "rating": 0,
+      "uid": "00000000-0000-0000-0000-000000000017",
+      "notes": "",
+      "created": "2026-02-17 13:34:44",
+      "directions": "I'm linking another recipe\n[recipe:Adding a Recipe]",
+      "description": "",
+      "source": "",
+      "total_time": "",
+      "categories": [],
+      "in_trash": false,
+      "difficulty": "",
+      "photo_hash": null,
+      "is_pinned": false,
+      "photo": null,
+      "ingredients": "",
+      "prep_time": "",
+      "source_url": "",
+      "image_url": null,
+      "deleted": false,
+      "name": "Second Recipe"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": true
+    }
+  }
+}

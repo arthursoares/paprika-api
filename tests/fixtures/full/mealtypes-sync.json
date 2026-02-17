@@ -1,0 +1,24 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/v2/sync/mealtypes/",
+    "body": [
+      {
+        "export_all_day": false,
+        "deleted": false,
+        "color": "#000000",
+        "original_type": null,
+        "order_flag": 4,
+        "name": "New Meal Type",
+        "export_time": 0,
+        "uid": "00000000-0000-0000-0000-000000000022"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": true
+    }
+  }
+}
