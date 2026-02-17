@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const PAPRIKA_API = path.join(__dirname, 'paprika-api.js');
+const PAPRIKA_API = path.join(__dirname, 'dist/cli.js');
 const INDEX_FILE = path.join(__dirname, 'recipes-index.json');
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || execSync('sops -d --extract \'["openai_api_key"]\' ~/clawd/secrets/api-keys.enc.yaml', { encoding: 'utf8' }).trim();
 

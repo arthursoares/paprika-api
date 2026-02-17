@@ -239,7 +239,7 @@ Options:
     const paprikaDir = path.join(__dirname, '..');
     
     const recipe = JSON.parse(
-      execSync(`node ${paprikaDir}/paprika-api.js get ${uid} 2>/dev/null`)
+      execSync(`node ${paprikaDir}/dist/cli.js get ${uid} 2>/dev/null`)
     );
     
     const result = await categorizeRecipe(recipe, { threshold, verbose });
@@ -255,7 +255,7 @@ Options:
       console.log('\n⏳ Applying changes...');
       for (const cat of result.categories) {
         try {
-          execSync(`node ${paprikaDir}/paprika-api.js assign-category "${uid}" "${cat.uid}" 2>/dev/null`);
+          execSync(`node ${paprikaDir}/dist/cli.js assign-category "${uid}" "${cat.uid}" 2>/dev/null`);
           console.log(`   ✅ Added: ${cat.name}`);
         } catch (e) {
           console.log(`   ❌ Failed to add: ${cat.name}`);
@@ -263,7 +263,7 @@ Options:
       }
       for (const cat of result.toRemove) {
         try {
-          execSync(`node ${paprikaDir}/paprika-api.js remove-category "${uid}" "${cat.uid}" 2>/dev/null`);
+          execSync(`node ${paprikaDir}/dist/cli.js remove-category "${uid}" "${cat.uid}" 2>/dev/null`);
           console.log(`   🗑️  Removed: ${cat.name}`);
         } catch (e) {
           console.log(`   ❌ Failed to remove: ${cat.name}`);

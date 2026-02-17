@@ -12,7 +12,7 @@ const paprikaDir = path.join(__dirname, '..');
 const { categorizeRecipe, getCategoryList } = require('./categorize-llm.js');
 
 async function getRecipeUids(filterCategoryUid) {
-  const rawList = JSON.parse(execSync(`node ${paprikaDir}/paprika-api.js list 2>/dev/null`));
+  const rawList = JSON.parse(execSync(`node ${paprikaDir}/dist/cli.js list 2>/dev/null`));
   // Handle both formats: array of strings or array of {uid, hash}
   const uids = rawList.map(item => typeof item === 'string' ? item : item.uid);
   
@@ -24,7 +24,7 @@ async function getRecipeUids(filterCategoryUid) {
   
   for (const uid of uids) {
     try {
-      const recipe = JSON.parse(execSync(`node ${paprikaDir}/paprika-api.js get ${uid} 2>/dev/null`));
+      const recipe = JSON.parse(execSync(`node ${paprikaDir}/dist/cli.js get ${uid} 2>/dev/null`));
       if (recipe.categories && recipe.categories.includes(filterCategoryUid)) {
         filtered.push(uid);
       }
@@ -73,7 +73,7 @@ async function main() {
     
     try {
       // Get recipe
-      const recipe = JSON.parse(execSync(`node ${paprikaDir}/paprika-api.js get ${uid} 2>/dev/null`));
+      const recipe = JSON.parse(execSync(`node ${paprikaDir}/dist/cli.js get ${uid} 2>/dev/null`));
       const currentCats = recipe.categories || [];
       
       // Categorize with LLM
@@ -89,7 +89,7 @@ async function main() {
         if (!dryRun) {
           for (const cat of newCats) {
             try {
-              execSync(`node ${paprikaDir}/paprika-api.js assign-category "${uid}" "${cat.uid}" 2>/dev/null`);
+              execSync(`node ${paprikaDir}/dist/cli.js assign-category "${uid}" "${cat.uid}" 2>/dev/null`);
             } catch (e) {
               console.log(`   ⚠️ Failed to assign ${cat.name}`);
             }
