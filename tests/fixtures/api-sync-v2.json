@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/v2/statistics/",
+    "body": {
+      "sync_email": "user@example.com",
+      "app_version": "3.8.4",
+      "os_version": "macOS 15.7.3",
+      "is_activated": true,
+      "is_activating_now": false,
+      "install_uid": "00000000-0000-0000-0000-000000000001",
+      "os": "macOS"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": true
+    }
+  }
+}

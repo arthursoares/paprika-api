@@ -1,0 +1,43 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/v2/sync/recipe/F05AB211-AD1D-4494-BE1E-B5C96DB67FF7/",
+    "body": {
+      "categories": [
+        "00000000-0000-0000-0000-000000000005"
+      ],
+      "created": "2026-02-17 12:22:02",
+      "difficulty": "Medium",
+      "image_url": null,
+      "photo": "00000000-0000-0000-0000-000000000002.jpg",
+      "deleted": false,
+      "notes": "",
+      "source_url": "",
+      "directions": "",
+      "total_time": "",
+      "servings": "4",
+      "is_pinned": false,
+      "source": "",
+      "prep_time": "23",
+      "on_favorites": false,
+      "in_trash": true,
+      "uid": "00000000-0000-0000-0000-000000000004",
+      "rating": 4,
+      "ingredients": "Teste",
+      "nutritional_info": "",
+      "cook_time": "12",
+      "scale": null,
+      "photo_hash": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+      "photo_large": "00000000-0000-0000-0000-000000000003.jpg",
+      "hash": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+      "description": "",
+      "name": "New Teste Recipe"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": true
+    }
+  }
+}

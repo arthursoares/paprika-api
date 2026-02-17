@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/v2/sync/photo/1C08CECF-CDD7-4F6A-92F8-693C404F7E53/",
+    "body": {
+      "filename": "00000000-0000-0000-0000-000000000003.jpg",
+      "name": "1",
+      "order_flag": 0,
+      "uid": "00000000-0000-0000-0000-000000000003",
+      "deleted": false,
+      "hash": "REDACTED_HASH000000000000000000000000000000000000000000000000000",
+      "recipe_uid": "00000000-0000-0000-0000-000000000004"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": true
+    }
+  }
+}

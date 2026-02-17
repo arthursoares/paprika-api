@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/v2/sync/categories/",
+    "body": [
+      {
+        "parent_uid": "00000000-0000-0000-0000-000000000006-1329-00000636D8D0DD2F",
+        "deleted": true,
+        "uid": "00000000-0000-0000-0000-000000000007",
+        "order_flag": 42,
+        "name": "Teste Category"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "result": true
+    }
+  }
+}
