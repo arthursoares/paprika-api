@@ -454,6 +454,23 @@ var RecipeService = class {
     });
     return { uid };
   }
+  /**
+   * Partial update of an existing recipe.
+   *
+   * Paprika's backend has no PATCH endpoint — every write replaces the full
+   * recipe document. `update()` fetches the current recipe, merges the patch
+   * on top, and saves. The returned uid is stable.
+   *
+   * Common uses:
+   *   - retroactive re-categorization after bulk import
+   *   - rating/favoriting without losing other fields
+   *   - renaming or source-url fixes
+   */
+  async update(uid, patch) {
+    const current = await this.get(uid);
+    const merged = { ...current, ...patch, uid };
+    return this.save(merged);
+  }
   async delete(uid, permanent = false) {
     const recipe = await this.get(uid);
     const updatedRecipe = { ...recipe };
@@ -1093,4 +1110,4 @@ export {
   SyncStatusSchema,
   PaprikaClient
 };
-//# sourceMappingURL=chunk-ZGDNWPUU.js.map
+//# sourceMappingURL=chunk-ZJCLRWSV.js.map

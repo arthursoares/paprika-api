@@ -80,6 +80,8 @@ declare const RecipeSchema: z.ZodObject<{
     scale: z.ZodOptional<z.ZodNullable<z.ZodString>>;
 }, "strip", z.ZodTypeAny, {
     uid: string;
+    categories: string[];
+    hash: string;
     name: string;
     ingredients: string;
     directions: string;
@@ -97,17 +99,17 @@ declare const RecipeSchema: z.ZodObject<{
     photo: string | null;
     photo_large: string | null;
     photo_hash: string | null;
-    categories: string[];
     rating: number;
     in_trash: boolean;
     is_pinned: boolean;
     on_favorites: boolean;
     created: string;
-    hash: string;
     deleted: boolean;
     scale?: string | null | undefined;
 }, {
     uid: string;
+    categories: string[];
+    hash: string;
     name: string;
     ingredients: string;
     directions: string;
@@ -125,19 +127,19 @@ declare const RecipeSchema: z.ZodObject<{
     photo: string | null;
     photo_large: string | null;
     photo_hash: string | null;
-    categories: string[];
     rating: number;
     in_trash: boolean;
     is_pinned: boolean;
     on_favorites: boolean;
     created: string;
-    hash: string;
     deleted?: boolean | undefined;
     scale?: string | null | undefined;
 }>;
 type Recipe = z.infer<typeof RecipeSchema>;
 declare const RecipeInputSchema: z.ZodObject<{
     uid: z.ZodOptional<z.ZodString>;
+    categories: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
+    hash: z.ZodOptional<z.ZodString>;
     name: z.ZodString;
     ingredients: z.ZodOptional<z.ZodString>;
     directions: z.ZodOptional<z.ZodString>;
@@ -155,18 +157,18 @@ declare const RecipeInputSchema: z.ZodObject<{
     photo: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     photo_large: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     photo_hash: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-    categories: z.ZodOptional<z.ZodArray<z.ZodString, "many">>;
     rating: z.ZodOptional<z.ZodNumber>;
     in_trash: z.ZodOptional<z.ZodBoolean>;
     is_pinned: z.ZodOptional<z.ZodBoolean>;
     on_favorites: z.ZodOptional<z.ZodBoolean>;
     created: z.ZodOptional<z.ZodString>;
-    hash: z.ZodOptional<z.ZodString>;
     deleted: z.ZodOptional<z.ZodDefault<z.ZodOptional<z.ZodBoolean>>>;
     scale: z.ZodOptional<z.ZodOptional<z.ZodNullable<z.ZodString>>>;
 }, "strip", z.ZodTypeAny, {
     name: string;
     uid?: string | undefined;
+    categories?: string[] | undefined;
+    hash?: string | undefined;
     ingredients?: string | undefined;
     directions?: string | undefined;
     description?: string | undefined;
@@ -183,18 +185,18 @@ declare const RecipeInputSchema: z.ZodObject<{
     photo?: string | null | undefined;
     photo_large?: string | null | undefined;
     photo_hash?: string | null | undefined;
-    categories?: string[] | undefined;
     rating?: number | undefined;
     in_trash?: boolean | undefined;
     is_pinned?: boolean | undefined;
     on_favorites?: boolean | undefined;
     created?: string | undefined;
-    hash?: string | undefined;
     deleted?: boolean | undefined;
     scale?: string | null | undefined;
 }, {
     name: string;
     uid?: string | undefined;
+    categories?: string[] | undefined;
+    hash?: string | undefined;
     ingredients?: string | undefined;
     directions?: string | undefined;
     description?: string | undefined;
@@ -211,13 +213,11 @@ declare const RecipeInputSchema: z.ZodObject<{
     photo?: string | null | undefined;
     photo_large?: string | null | undefined;
     photo_hash?: string | null | undefined;
-    categories?: string[] | undefined;
     rating?: number | undefined;
     in_trash?: boolean | undefined;
     is_pinned?: boolean | undefined;
     on_favorites?: boolean | undefined;
     created?: string | undefined;
-    hash?: string | undefined;
     deleted?: boolean | undefined;
     scale?: string | null | undefined;
 }>;
@@ -272,20 +272,20 @@ declare const MealSchema: z.ZodObject<{
     scale: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     is_ingredient: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
 }, "strip", z.ZodTypeAny, {
-    type: number;
-    date: string;
     uid: string;
+    type: number;
     name: string;
+    date: string;
     order_flag: number;
     recipe_uid: string | null;
     is_ingredient: boolean;
     scale?: string | null | undefined;
     type_uid?: string | null | undefined;
 }, {
-    type: number;
-    date: string;
     uid: string;
+    type: number;
     name: string;
+    date: string;
     order_flag: number;
     recipe_uid: string | null;
     scale?: string | null | undefined;
@@ -363,12 +363,12 @@ declare const GroceryItemSchema: z.ZodObject<{
     list_uid: z.ZodNullable<z.ZodString>;
 }, "strip", z.ZodTypeAny, {
     uid: string;
-    name: string;
-    order_flag: number;
-    recipe_uid: string | null;
     ingredient: string;
     quantity: string;
     aisle: string;
+    name: string;
+    order_flag: number;
+    recipe_uid: string | null;
     purchased: boolean;
     recipe: string | null;
     instruction: string;
@@ -377,12 +377,12 @@ declare const GroceryItemSchema: z.ZodObject<{
     list_uid: string | null;
 }, {
     uid: string;
-    name: string;
-    order_flag: number;
-    recipe_uid: string | null;
     ingredient: string;
     quantity: string;
     aisle: string;
+    name: string;
+    order_flag: number;
+    recipe_uid: string | null;
     purchased: boolean;
     recipe: string | null;
     instruction: string;
@@ -524,32 +524,32 @@ declare const SyncStatusSchema: z.ZodObject<{
     menus: z.ZodNumber;
     menuitems: z.ZodNumber;
 }, "strip", z.ZodTypeAny, {
-    categories: number;
     recipes: number;
-    photos: number;
+    categories: number;
+    meals: number;
+    pantry: number;
     groceries: number;
+    photos: number;
     grocerylists: number;
     groceryaisles: number;
     groceryingredients: number;
-    meals: number;
     mealtypes: number;
     bookmarks: number;
-    pantry: number;
     pantrylocations: number;
     menus: number;
     menuitems: number;
 }, {
-    categories: number;
     recipes: number;
-    photos: number;
+    categories: number;
+    meals: number;
+    pantry: number;
     groceries: number;
+    photos: number;
     grocerylists: number;
     groceryaisles: number;
     groceryingredients: number;
-    meals: number;
     mealtypes: number;
     bookmarks: number;
-    pantry: number;
     pantrylocations: number;
     menus: number;
     menuitems: number;
@@ -562,6 +562,21 @@ declare class RecipeService {
     list(): Promise<RecipeListItem[]>;
     get(uid: string): Promise<Recipe>;
     save(recipe: RecipeInput): Promise<{
+        uid: string;
+    }>;
+    /**
+     * Partial update of an existing recipe.
+     *
+     * Paprika's backend has no PATCH endpoint — every write replaces the full
+     * recipe document. `update()` fetches the current recipe, merges the patch
+     * on top, and saves. The returned uid is stable.
+     *
+     * Common uses:
+     *   - retroactive re-categorization after bulk import
+     *   - rating/favoriting without losing other fields
+     *   - renaming or source-url fixes
+     */
+    update(uid: string, patch: Partial<RecipeInput>): Promise<{
         uid: string;
     }>;
     delete(uid: string, permanent?: boolean): Promise<void>;

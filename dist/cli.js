@@ -3,7 +3,7 @@ import {
   PaprikaClient,
   PaprikaError,
   resolveConfig
-} from "./chunk-ZGDNWPUU.js";
+} from "./chunk-ZJCLRWSV.js";
 
 // src/cli.ts
 async function readStdin() {
@@ -42,6 +42,47 @@ var commands = {
     const permanent = args.includes("--permanent");
     await client.recipes.delete(uid, permanent);
     console.log(JSON.stringify({ uid, success: true, permanent }, null, 2));
+  },
+  async "update-recipe"(client, args) {
+    const uid = args[0];
+    if (!uid) exit("Usage: paprika update-recipe <uid>  (JSON patch on stdin)");
+    const body = (await readStdin()).trim();
+    if (!body) exit("Empty stdin \u2014 provide a JSON patch.");
+    let patch;
+    try {
+      patch = JSON.parse(body);
+    } catch (e) {
+      exit(`Invalid JSON on stdin: ${e.message}`);
+    }
+    const result = await client.recipes.update(uid, patch);
+    console.log(JSON.stringify({ ok: true, ...result, patchedFields: Object.keys(patch) }, null, 2));
+  },
+  async "set-categories"(client, args) {
+    const [uid, ...catUids] = args;
+    if (!uid) exit("Usage: paprika set-categories <recipe-uid> [<cat-uid>...]");
+    const result = await client.recipes.update(uid, { categories: catUids });
+    console.log(JSON.stringify({ ok: true, ...result, categories: catUids }, null, 2));
+  },
+  async "add-categories"(client, args) {
+    const [uid, ...catUids] = args;
+    if (!uid || catUids.length === 0) {
+      exit("Usage: paprika add-categories <recipe-uid> <cat-uid> [<cat-uid>...]");
+    }
+    const current = await client.recipes.get(uid);
+    const merged = Array.from(/* @__PURE__ */ new Set([...current.categories ?? [], ...catUids]));
+    const result = await client.recipes.update(uid, { categories: merged });
+    console.log(JSON.stringify({ ok: true, ...result, added: catUids, categories: merged }, null, 2));
+  },
+  async "remove-categories"(client, args) {
+    const [uid, ...catUids] = args;
+    if (!uid || catUids.length === 0) {
+      exit("Usage: paprika remove-categories <recipe-uid> <cat-uid> [<cat-uid>...]");
+    }
+    const removeSet = new Set(catUids);
+    const current = await client.recipes.get(uid);
+    const filtered = (current.categories ?? []).filter((c) => !removeSet.has(c));
+    const result = await client.recipes.update(uid, { categories: filtered });
+    console.log(JSON.stringify({ ok: true, ...result, removed: catUids, categories: filtered }, null, 2));
   },
   async categories(client) {
     const categories = await client.categories.list();
@@ -128,6 +169,13 @@ Commands:
   add                         Add recipe (JSON from stdin)
   delete-recipe <uid> [--permanent]
                               Delete recipe (moves to trash, or permanent)
+  update-recipe <uid>         Partial update (JSON patch from stdin)
+  set-categories <recipe-uid> [<cat-uid>...]
+                              Replace the recipe's categories array
+  add-categories <recipe-uid> <cat-uid>...
+                              Append to existing categories (deduped)
+  remove-categories <recipe-uid> <cat-uid>...
+                              Remove specific categories
   categories                  List all categories
   add-category <name> [--parent <uid>]
                               Create category
