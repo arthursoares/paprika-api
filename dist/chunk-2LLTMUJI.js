@@ -439,12 +439,17 @@ var RecipeService = class {
       photo_hash: recipe.photo_hash ?? null,
       categories: recipe.categories ?? [],
       rating: recipe.rating ?? 0,
-      in_trash: false,
-      is_pinned: false,
+      // State flags must propagate from input — hardcoding `false` would
+      // silently un-pin / un-trash / un-delete a recipe whenever update()
+      // round-trips it through save(). Same for `scale`, which has no
+      // sensible default.
+      in_trash: recipe.in_trash ?? false,
+      is_pinned: recipe.is_pinned ?? false,
       on_favorites: recipe.on_favorites ?? false,
       created: recipe.created ?? now,
       hash: this.computeHash(recipe),
-      deleted: false
+      deleted: recipe.deleted ?? false,
+      scale: recipe.scale ?? null
     };
     await this.client.request({
       method: "POST",
@@ -453,6 +458,23 @@ var RecipeService = class {
       data: fullRecipe
     });
     return { uid };
+  }
+  /**
+   * Partial update of an existing recipe.
+   *
+   * Paprika's backend has no PATCH endpoint — every write replaces the full
+   * recipe document. `update()` fetches the current recipe, merges the patch
+   * on top, and saves. The returned uid is stable.
+   *
+   * Common uses:
+   *   - retroactive re-categorization after bulk import
+   *   - rating/favoriting without losing other fields
+   *   - renaming or source-url fixes
+   */
+  async update(uid, patch) {
+    const current = await this.get(uid);
+    const merged = { ...current, ...patch, uid };
+    return this.save(merged);
   }
   async delete(uid, permanent = false) {
     const recipe = await this.get(uid);
@@ -1093,4 +1115,4 @@ export {
   SyncStatusSchema,
   PaprikaClient
 };
-//# sourceMappingURL=chunk-ZGDNWPUU.js.map
+//# sourceMappingURL=chunk-2LLTMUJI.js.map
