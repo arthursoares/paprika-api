@@ -125,6 +125,29 @@ describe('RecipeService', () => {
       expect(body?.ingredients).toBe('1 cup flour');
     });
 
+    it('preserves in_trash/is_pinned/deleted/scale across update', async () => {
+      const pinnedTrashedScaled = {
+        ...baseRecipe,
+        in_trash: true,
+        is_pinned: true,
+        deleted: false,
+        scale: '2/1',
+      };
+      const client = createMockClient({
+        'GET v2 /recipe/ABC123/': { result: pinnedTrashedScaled },
+        'POST v2 /recipe/ABC123/': {},
+      });
+      const service = new RecipeService(client);
+
+      await service.update('ABC123', { categories: ['CAT3'] });
+
+      const body = postedBody(client as unknown as Parameters<typeof postedBody>[0]);
+      expect(body?.in_trash).toBe(true);
+      expect(body?.is_pinned).toBe(true);
+      expect(body?.scale).toBe('2/1');
+      expect(body?.categories).toEqual(['CAT3']);
+    });
+
     it('can set rating without touching other fields', async () => {
       const client = createMockClient({
         'GET v2 /recipe/ABC123/': { result: baseRecipe },

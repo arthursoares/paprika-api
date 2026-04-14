@@ -3,7 +3,7 @@ import {
   PaprikaClient,
   PaprikaError,
   resolveConfig
-} from "./chunk-ZJCLRWSV.js";
+} from "./chunk-2LLTMUJI.js";
 
 // src/cli.ts
 async function readStdin() {
